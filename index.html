@@ -7,11 +7,13 @@
     <!-- Enlace a Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        /* Estilo CSS para asegurar que las imágenes tengan un tamaño de 200x200 */
-        .imagen-github {
-            width: 200px;
-            height: 200px;
+        .imagen-github, .video-github {
+            width: 100%; /* Asegura que las imágenes y el video ocupen todo el ancho del card */
+            height: 200px; /* Altura fija para las imágenes y el video */
             object-fit: cover; /* Ajusta la imagen para que cubra el contenedor sin perder sus proporciones */
+        }
+        .video-github {
+            height: auto; /* Permite que el video mantenga su proporción */
         }
     </style>
 </head>
@@ -378,7 +380,13 @@
                     <img src="taladro.png" class="card-img-top imagen-github" alt="Descripción de la imagen">
                 </div>
             </div>
-        
+            
+                    <!-- Bloque para el video de Google Drive -->
+            <div class="col-md-4 mb-4">
+                <div class="card">
+                    <iframe src="https://drive.google.com/file/d/1jT-oJjSp_jIWF-anuv4dFJMQPmrwarxr/preview" class="video-github" allow="autoplay"></iframe>
+                </div>
+            </div>
     </div>
     <!-- Enlace a Bootstrap JS y sus dependencias (Opcional, para funcionalidades de Bootstrap que requieren JavaScript) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
